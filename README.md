@@ -1,1 +1,2 @@
-# AI_Team_Project_2
+# 외식 산업 AI 챗봇 고도화
+
