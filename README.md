@@ -87,6 +87,7 @@
 
 
 <img src="https://github.com/ForOrganize/AI_Team_Project_2/assets/104473698/795781c0-b685-471c-a065-89280bde7a66" width="80%">
+
   - 봇 서버: 개발된 모델을 사용하는 서버.
     - 질문을 수신하면 의도명, 개체명, 의도태그를 파악하고 그에 맞는 답변을 검색, JSON 형태로 송신
   - 웹 서버: Flask를 사용하며, 웹 UI와 봇 서버를 연결하는 중간다리로 사용된다.
