@@ -120,3 +120,40 @@
     - 음성 인식 기능 도입을 준비 했으나 활용도적인 측면에서 현재 필요성은 낮다고 생각해 도입 가능성만 확인하고 중지
     - 챗봇 사용자의 정보를 저장하여 이를 활용하여 메뉴를 추천하는 시스템을 구현하고자 했으나 준비한 DB를 연동하지 못해 다음 버전으로 넘겼다.
     - 버튼을 사용한 메뉴 주문 시스템은 도메인 지식 부족으로 구현하지 못해 현재 버전은 챗봇으로만 주문해야한다.
+    - 임의의 외부 업체를 선택하고 대시보드를 통한 업체 분석 등을 진행하지 않아 선택에 따른 충분한 조사가 이뤄지지 못했다.
+
+
+## 코드 구성
+
+  -  Model
+    - intent
+     - IntentModel_New.py: Rule-Based 의도 모델
+     - total_train_data_new.csv: 모델 생성에 참조한 샘플 문장
+    - ner
+      - nerModel_New.py: 개체명 클래스 매칭 함수
+      - ner2021_compressed.json: 국립국어2021 개체명 분석 데이터 편집
+        
+  - train_tools/qna
+    - branch.json: 점포별 질의 관련 데이터
+    - faq.json: faq 데이터
+
+  - utils
+    - BotServer.py: 봇 서버 관리 함수
+    - FindAnswer.py: 답변 출력 알고리즘
+    - PreprocessW2V.py: 텍스트 전처리기
+    - uswer_dic.txt: 형태소 분석기 업데이트용 파일
+
+  - 개별 파일
+    - customer.py: 고객 정보 관리 개체(예약, 장바구니 관리)
+    - bot2.py: 서버 프로그램
+    - client.py: 클라이언트 프로그램
+    - app.py: 웹 서버 프로그램
+    - menu.json: 메뉴판 파일
+    - ko_with_corpus(보충 필요): 전처리용 단어 인덱싱 파
+    - samplequestion.txt: 예시 질문 목록
+    - text2.py: 테스트 코드
+    - client_test.py: 클라이언트 테스트코드
+    - false_note.csv: 테스트용 참조 csv파일, 모델이 걸러내지 못한 문장 모음
+    - train_ner_mode.py: 개체명 사전 추가 및 정정 코드
+    - additional_dict.csv: 개체명 사전 추가용 csv파일
+    - various_text_transformer.py: additional dict/user dict 일괄 업데이트 파
