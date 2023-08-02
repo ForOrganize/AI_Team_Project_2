@@ -125,7 +125,7 @@
 
 ## 코드 구성
 
-  -  Model
+#### Model
     - intent
      - IntentModel_New.py: Rule-Based 의도 모델
      - total_train_data_new.csv: 모델 생성에 참조한 샘플 문장
@@ -133,17 +133,17 @@
       - nerModel_New.py: 개체명 클래스 매칭 함수
       - ner2021_compressed.json: 국립국어2021 개체명 분석 데이터 편집
         
-  - train_tools/qna
+#### train_tools/qna
     - branch.json: 점포별 질의 관련 데이터
     - faq.json: faq 데이터
 
-  - utils
+#### utils
     - BotServer.py: 봇 서버 관리 함수
     - FindAnswer.py: 답변 출력 알고리즘
     - PreprocessW2V.py: 텍스트 전처리기
     - uswer_dic.txt: 형태소 분석기 업데이트용 파일
 
-  - 개별 파일
+#### 분류 없음
     - customer.py: 고객 정보 관리 개체(예약, 장바구니 관리)
     - bot2.py: 서버 프로그램
     - client.py: 클라이언트 프로그램
@@ -156,4 +156,4 @@
     - false_note.csv: 테스트용 참조 csv파일, 모델이 걸러내지 못한 문장 모음
     - train_ner_mode.py: 개체명 사전 추가 및 정정 코드
     - additional_dict.csv: 개체명 사전 추가용 csv파일
-    - various_text_transformer.py: additional dict/user dict 일괄 업데이트 파
+    - various_text_transformer.py: additional dict/user dict 일괄 업데이트 파일
